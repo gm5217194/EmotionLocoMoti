@@ -1,0 +1,56 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        .emotion { font-size: 24px; font-weight: bold; color: blue; }
+    </style>
+</head>
+<body>
+    <h1>Facial Emotion Detection for Loco Pilots</h1>
+    <h2>Detected Emotion:</h2>
+    <p class="emotion" id="emotion">Waiting...</p>
+
+    <script>
+        // Connect to Flask Server Sent Events (SSE)
+        var eventSource = new EventSource("/emotion_feed");
+
+        // Update the emotion in real-time
+        eventSource.onmessage = function(event) {
+            document.getElementById("emotion").innerText = event.data;
+        };
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Emotion Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        #emotion {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff6600;
+        }
+    </style>
+</head>
+<body>
+    <h1>Facial Emotion Detection</h1>
+    <p>Detected Emotion: <span id="emotion">{{ emotion }}</span></p>
+</body>
+</html>
+
+
